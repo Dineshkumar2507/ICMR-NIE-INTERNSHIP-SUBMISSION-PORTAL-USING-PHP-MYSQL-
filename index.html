@@ -1,0 +1,216 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Form</title>
+    <link rel="icon" href="https://icmrnie.in/niecareer/image/logo.png">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body style="background-color:white;">
+   <h1>ICMR-NIE :</h1>
+   <h1>Internship Online Application</h1>
+   <form method="post" action="form.php" id="myform" enctype="multipart/form-data">
+     <hr class="line">
+     
+     <label for="email">Email</label>
+     <input type="text" name="email" class="box" placeholder="Please enter your Email" id="email" required>
+     <span id="emailerror"></span>
+
+     <label>Applications Details</label>
+     <label for="name">Name</label>
+     <input type="text" name="name" class="box" placeholder="Please enter your full name" id="name" required>
+     <span id="nameerror"></span>
+
+     <label for="age">Age</label>
+     <input type="text" name="age" class="box" placeholder="Please enter your age" id="age" maxlength="3" required>
+     <span id="ageerror"></span>
+
+     <label for="dropbox">Gender</label>
+     <select  id="gender" name="gender" class="drop" required>
+        <option value="" hidden >Select the gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+     </select>
+
+     <label for="number">Phone Number</label>
+     <div>
+        <input type="text" name="number" class="box" placeholder="Enter The Phone Number" id="number" pattern="\d{10}" maxlength="10" minlength="10" required>
+     </div>
+     <span id="numbererror"></span>
+
+     <label for="emername">Emergency contact person name</label>
+     <input type="text" class="box" name="emername" placeholder="Emergency contact person name" id="emername" required>
+     <span id="emernameerror"></span>
+
+     <label for="emernumber">Emergency contact no </label>
+     <input type="text" class="box" name="emernumber" placeholder="Emergency contact no" id="emernumber" maxlength="10" required>
+     <span id="emernumbererror"></span>
+
+     <label for="education">Applicant's education</label>
+     <P> (Current course of education) Presently, internships are <strong> NOT offered in laboratory disciplines such as Microbiology, Biochemistry, or Biotechnology</strong></P>
+     <select name="education" class="drop" id="education" required>
+        <option value="" hidden>select the course of education</option>
+        <option value="Computer Science Engg">Computer Science Engg</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Electronics and Communication Engg">Electronics and Communication Engg</option>
+        <option value="Machanical Engg">Machanical Engg</option>      
+     </select>
+
+     <label for="courseeducation"> Previous course of education</label>
+     <select name="courseeducation" class="drop" id="courseeducation" required>
+        <option value="" hidden>Previous course of education</option>
+        <option value="Higher Secondary">Higher Secondary</option>
+        <option value="SSLC">SSLC</option>
+        <option value="Bachelors of Technology">Bachelors of Technology</option>
+        <option value="Bachelor of Science">Bachelor of Science</option>      
+     </select>
+
+     <label for="institution"> Name of the  applicant's institution</label>
+     <input type="text" name="institution" class="box" placeholder="Name of the Institution" id="institution" required>
+     <span id="institutionerror"></span>
+
+     <label for="institutionaddress">Institution address </label>
+     <input type="text" name="institutionaddress" class="box" placeholder="Institution Address" id="institutionaddress" required>
+     <span id="institutionaddresserror"></span>
+
+     <label for="supervisor"> Applicant's institutional supervisor name and designation</label>
+     <input type="text" name="supervisor" class="box" id="supervisor" required>
+     <span id="supervisorerror"></span>
+
+     <label for="expectations"> What are your expectations from the internship?</label>
+     <input type="text" name="expectations" class="box" id="expectations" required>
+     <span id="expectationserror"></span>
+
+     <label for="topic">What is your interested topic during the internship?</label>
+     <input type="text" class="box" name="topic" id="topic" required>
+     <span id="topicerror"></span>
+
+     <label for="CV">Please upload your latest CV</label>
+     <input type="file" class="box" placeholder="pdf type" name="cv" id="cv" accept=".pdf" required>
+     <span id="cverror"></span>
+
+     <label for="startdate"> Internship Start Date </label>
+     <p> Should apply at least <strong> ONE MONTH </strong> prior to the proposed internship startdate failing which the application will be rejected</p>
+     <input type="date" name="startdate" class="drop" id="startdate" required>
+     <span id="startdateerror"></span>
+
+     <label for="enddate"> Internship End Date </label>
+     <p>The minimum and maximum period for an internship will be <strong>TWO WEEKS</strong> and <strong>THREE MONTHS</strong> months respectively</p>
+     <input type="date" name="enddate" class="drop" id="enddate" required >
+     <span id="enddateerror"></span>
+
+     <label for="area">Area of Internship</label>
+     <select name="area" class="drop" id="area" required>
+         <option value="" hidden>Select The Area of Interest</option>
+         <option value="Public Health & Epidemiology">Public Health & Epidemiology</option>
+         <option value="Bio-statistics">Bio-statistics</option>
+         <option value="Social & Behavioural Science"> Social & Behavioural Science</option>
+         <option value="Library Science">Library Science</option>
+         <option value="Public Health Data Managment">Public Health Data Managment</option>
+         <option value="Health Systems Research">Health Systems Research</option>
+      </select>
+
+     <label for="mentor">Preferred Mentor at ICMR-NIE</label>
+     <p>(Please go through the Scientist profile at ICMR-NIE website)</p>
+     <input type="text" class="box" name="mentor" id="mentor" required >
+     <span id="mentorerror"></span>
+
+     <label for="bonafide">Institution Bonafide certificate with  your photograph </label>
+     <p class="unbold"> Please <strong>DO NOT</strong> upload here mark sheet, photo and  any other documents, id card,CV(Resume)</p>
+     <input type="file" class="box" placeholder="pdf,imp,jpg" name="bonafide" id="bonafide" accept=".pdf" required>
+     <span id="bonafideerror"></span>
+
+     <label for="checkbox"> Statement of understanding of the conditions of the Internship program</label>
+     <p class="unbold"> I hereby agree that I have read the terms of reference for internship program and Iwill abide the rules and regulations of the institution. I hereby take theresponsibility for the documents which I submit in this form. I understand thatany malpractice or submission of wrong/fake documents would invite strict action from the institution</p>
+     <p>Tick all that apply.</p>
+     <div class = "tick">
+         <input type="checkbox" name="checkbox" id="tick" required>
+         <p> I agree to the above terms of reference and conditions of the internship program</p>
+     </div>
+     <span id="checkboxerror"></span>
+
+     <hr class="line"> 
+
+     <div class="button">
+       <label for="submit" class="submit" style="font-weight: bolder;">I have filled all the above details</label>
+       <button type="submit" name="submit" id="submit" class="submit">submit</button>
+     </div>
+   </form>
+    
+
+   <script>
+      const form = document.getElementById("myform");
+      const fields = [
+      "email", "name", "age", "gender", "number", "emername", "emernumber",
+      "education", "courseeducation", "institution", "institutionaddress", "supervisor",
+      "expectations", "topic", "cv", "bonafide", "startdate", "enddate", "area",
+      "mentor", "tick"
+      ];
+
+      const errors = {};
+      fields.forEach(f => errors[f] = document.getElementById(f + "error"));
+
+      form.addEventListener("submit", function(e) {
+      let valid = true;
+      fields.forEach(key => { if (errors[key]) errors[key].innerText = ""; });
+
+      const email = document.getElementById("email").value.trim();
+      if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+         errors.email.innerText = "Invalid email format";
+         valid = false;
+      }
+
+
+      const cv = document.getElementById("cv").value;
+      if (!cv.endsWith(".pdf")) {
+         errors.cv.innerText = "Upload PDF";
+         valid = false;
+      }
+
+      const bf = document.getElementById("bonafide").value;
+      if (!bf.endsWith(".pdf")) {
+         errors.bonafide.innerText = "Upload PDF";
+         valid = false;
+      }
+      
+      const age = document.getElementById("age").value;
+      const ageVal = parseInt(age, 10);
+      if (isNaN(ageVal) || ageVal < 18 || ageVal > 100) {
+         errors.age.innerText = "Invalid age must be 18 or above";
+         valid = false;
+      }
+
+      const start = new Date(document.getElementById("startdate").value);
+      const end = new Date(document.getElementById("enddate").value);
+      const today = new Date();
+      const oneMonthLater = new Date();
+      oneMonthLater.setMonth(today.getMonth() + 1);
+      const startday = start.getDay();
+      const endday = end.getDay()
+
+      if (start < oneMonthLater) {
+         errors.startdate.innerText = "Start date must be at least 1 month from today and should be in week days";
+         valid = false;
+      }
+      if (startday == 0 || startday == 6) {
+         errors.startdate.innerText = "Start date  should not be in saturday or sunday";
+         valid = false;
+      }
+      
+
+      if ((end - start) / (1000 * 60 * 60 * 24) < 15) {
+         errors.enddate.innerText = "End date must be at least 15 days after start date and should be in week days";
+         valid = false;
+      }
+      if (endday == 0 || endday == 6) {
+         errors.enddate.innerText = "End date should not be in Saturday or sunday";
+         valid = false;
+      }
+      
+      if (!valid) e.preventDefault();
+      });
+   </script>
+
+   
+</body>
+</html>
